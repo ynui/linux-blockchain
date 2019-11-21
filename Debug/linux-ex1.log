@@ -1,0 +1,6 @@
+﻿  reloadBlocks.c
+c:\users\ynui1\onedrive\desktop\linux\ex1\linux-ex1\linux-ex1\reloadblocks.c(30): warning C4013: 'strtok' undefined; assuming extern returning int
+c:\users\ynui1\onedrive\desktop\linux\ex1\linux-ex1\linux-ex1\reloadblocks.c(37): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+c:\users\ynui1\onedrive\desktop\linux\ex1\linux-ex1\linux-ex1\reloadblocks.c(30): warning C4047: 'initializing': 'char *' differs in levels of indirection from 'int'
+c:\users\ynui1\onedrive\desktop\linux\ex1\linux-ex1\linux-ex1\reloadblocks.c(48): warning C4013: 'system' undefined; assuming extern returning int
+  linux-ex1.vcxproj -> C:\Users\ynui1\OneDrive\Desktop\linux\ex1\linux-ex1\Debug\linux-ex1.exe
