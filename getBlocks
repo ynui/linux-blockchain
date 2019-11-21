@@ -1,0 +1,14 @@
+#!/bin/bash
+rm -f blocks
+touch blocks
+blockchain=$(curl https://api.blockcypher.com/v1/btc/main)
+currBlockHash=$(echo $blockchain | grep -Po '"hash": *"[^"]*"' | grep -Po '[0-9a-f]{64}')
+for i in {1..10}
+do  
+addr="https://api.blockcypher.com/v1/btc/main/blocks/$currBlockHash"
+currBlock=$(curl ${addr})
+data=$(echo $currBlock | grep -Po '("hash"|"height"|"total"|"time"|"relayed_by"|"prev_block"): "*[0-9a-zA-Z.:-]*"*')
+prevHash=$(echo $data | grep -Po '"prev_block": *"[^"]*"' | grep -Po '[0-9a-f]{64}')
+currBlockHash=$prevHash
+echo ${data//\"} >> blocks
+done
